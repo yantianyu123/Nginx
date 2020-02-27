@@ -21,6 +21,8 @@ public class SessionServlet extends HttpServlet {
             req.getSession().setAttribute("uid", new Random().nextInt(100));
         }
         System.out.println(req.getSession().getAttribute("uid"));
+        //转发
         req.getRequestDispatcher("/index.jsp").forward(req,resp);
+        System.out.println("llll");
     }
 }
